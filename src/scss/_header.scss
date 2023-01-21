@@ -1,0 +1,154 @@
+@import "./variable";
+@import "./mixin";
+@import "./keyframe";
+
+#header {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../../public/image/header/vortexheader.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: "Inter", sans-serif;
+    
+    .conic-background {
+        position: absolute;
+        inset: 0;
+        background-image: linear-gradient(rgba($color: #000000, $alpha: 0.3),#121212);
+    }
+
+    .header {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        padding: 0 100px;
+        color: $text-body;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        flex-direction:column;
+        padding-top: 120px;
+        width: 900px;
+
+        @include tablet() {
+            padding: 0 20px;
+            padding-top: 50px;
+        };
+        @include mobile() {
+            padding: 0 20px;
+            padding-top: 50px;
+        };
+
+        .header-logo {
+            width: 70%;
+            @include tablet() {
+                width: 80%;
+            }
+            @include mobile() {
+                width: 80%;
+            }
+        }
+
+        p {
+            font-size: 1.7rem;
+            color: #fefefe;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        button.header-create-pack {
+            position: relative;
+            padding: 15px 32px;
+            font-size: 1.7rem;
+            font-weight: 800;
+            border: none;
+            border-radius: 35px;
+            color: #fff;
+            background-image: linear-gradient(50deg,#411ef5,#54a9f4);
+            overflow: hidden;
+            
+            &:hover {
+                cursor: pointer;
+                box-shadow: 0 0 10px 7px #1631b6;
+            }
+            
+            &::before {
+                animation: Button_TranslateX 1s ease infinite;
+                content: "";
+                display: block;
+                position: absolute;
+                height: 100%;
+                top: 0;
+                background: #f4f4f4;
+                width: 30px;
+                filter: blur(10px);
+            }
+            
+        }
+
+        .header-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            margin: 20px 0;
+            font-size: .9rem;
+
+            @include tablet() {
+                flex-direction: column;
+                gap: 5px;
+            };
+            @include mobile() {
+                flex-direction: column;
+                gap: 5px;
+            };
+        }
+
+        .header-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            @include tablet() {
+                flex-direction: column;
+                gap: 10px;
+            };
+            @include mobile() {
+                flex-direction: column;
+                gap: 10px;
+            };
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                
+                img {
+                    width: 35px;
+                    aspect-ratio: 1/1;
+                }
+
+                span {
+                    color: $text-purple;
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                    margin-left: 5px;
+
+                    &:hover {
+                        color: #fff;
+                    }
+                }
+                
+                &:nth-child(2) span{
+                    color: $text-light-blue;
+                    &:hover {
+                        color: #fff;
+                    }
+                }
+            }
+            
+        }
+
+    }
+}

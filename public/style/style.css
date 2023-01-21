@@ -1,0 +1,189 @@
+@import 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap';
+@import "//db.onlinewebfonts.com/c/d5e93178e6be7b12f796dae0510e2137?family=Cyberpunks";
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css';
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  min-height: 100vh;
+}
+
+html {
+  user-select: none;
+}
+
+@keyframes Button_TranslateX {
+  from {
+    transform: translateX(-100px) skewX(45deg);
+  }
+  to {
+    transform: translateX(450px) skewX(45deg);
+  }
+}
+#header {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../../public/image/header/vortexheader.jpg);
+  background-size: cover;
+  background-position: center;
+  font-family: "Inter", sans-serif;
+}
+#header .conic-background {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), #121212);
+}
+#header .header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0 100px;
+  color: #d7d7d7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 120px;
+  width: 900px;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  #header .header {
+    padding: 0 20px;
+    padding-top: 50px;
+  }
+}
+@media (max-width: 767px) {
+  #header .header {
+    padding: 0 20px;
+    padding-top: 50px;
+  }
+}
+#header .header .header-logo {
+  width: 70%;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  #header .header .header-logo {
+    width: 80%;
+  }
+}
+@media (max-width: 767px) {
+  #header .header .header-logo {
+    width: 80%;
+  }
+}
+#header .header p {
+  font-size: 1.7rem;
+  color: #fefefe;
+  margin: 20px 0;
+  text-align: center;
+}
+#header .header button.header-create-pack {
+  position: relative;
+  padding: 15px 32px;
+  font-size: 1.7rem;
+  font-weight: 800;
+  border: none;
+  border-radius: 35px;
+  color: #fff;
+  background-image: linear-gradient(50deg, #411ef5, #54a9f4);
+  overflow: hidden;
+}
+#header .header button.header-create-pack:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px 7px #1631b6;
+}
+#header .header button.header-create-pack::before {
+  animation: Button_TranslateX 1s ease infinite;
+  content: "";
+  display: block;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  background: #f4f4f4;
+  width: 30px;
+  filter: blur(10px);
+}
+#header .header .header-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin: 20px 0;
+  font-size: 0.9rem;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  #header .header .header-info {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+@media (max-width: 767px) {
+  #header .header .header-info {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+#header .header .header-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  #header .header .header-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+@media (max-width: 767px) {
+  #header .header .header-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+#header .header .header-nav a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+#header .header .header-nav a img {
+  width: 35px;
+  aspect-ratio: 1/1;
+}
+#header .header .header-nav a span {
+  color: #984cff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 5px;
+}
+#header .header .header-nav a span:hover {
+  color: #fff;
+}
+#header .header .header-nav a:nth-child(2) span {
+  color: #b8e5ff;
+}
+#header .header .header-nav a:nth-child(2) span:hover {
+  color: #fff;
+}
+
+/*# sourceMappingURL=style.css.map */

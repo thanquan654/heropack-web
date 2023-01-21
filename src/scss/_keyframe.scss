@@ -1,0 +1,7 @@
+@keyframes Button_TranslateX {
+    from {
+        transform: translateX(-100px) skewX(45deg);
+    } to {
+        transform: translateX(450px) skewX(45deg);
+    }
+}
